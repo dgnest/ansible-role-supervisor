@@ -1,0 +1,6 @@
+---
+
+- include: common.yaml
+- include: configure.yaml
+- include: install.yaml
+- include: post_install.yaml

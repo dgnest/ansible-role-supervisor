@@ -1,0 +1,12 @@
+---
+
+- name: reloaded supervisor
+  sudo: yes
+  supervisorctl: name="{{ item.name }}" state="{{ item.state }}"
+  register: reloaded_supervisor
+  when: supervisor_app is defined
+  with_items: supervisor_app
+  tags:
+    - webserver
+    - wait
+    - deployment
