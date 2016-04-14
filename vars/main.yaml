@@ -1,0 +1,8 @@
+---
+
+# vars file for supervisor
+
+_supervisor_path:
+  tmp: "/var/tmp"
+  conf: "/etc/supervisor/conf.d"
+  logs: "/var/log/supervisor"
