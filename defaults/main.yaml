@@ -7,7 +7,7 @@ supervisor_programs:
     user: "user"
     directory: "directory"
     numprocs: 1
-    autostart: true
+    instalautostart: true
     autorestart: true
     startsecs: 10
     priority: 990
