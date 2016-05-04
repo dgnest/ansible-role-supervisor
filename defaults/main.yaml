@@ -1,14 +1,6 @@
 ---
 # defaults file for supervisor
 
-# supervisor_templates:
-#   - src: "uwsgi.conf.j2"
-#     dest: "uwsgi.conf"
-
-# supervisor_app:
-#   - name: "uwsgi"
-#     state: "restarted"
-
 supervisor_programs:
   - program: name
     command: 'command'
