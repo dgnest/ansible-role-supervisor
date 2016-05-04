@@ -1,13 +1,13 @@
 ---
 # defaults file for supervisor
-
-supervisor_programs:
-  - program: name
-    command: 'command'
-    user: "user"
-    directory: "directory"
-    numprocs: 1
-    instalautostart: true
-    autorestart: true
-    startsecs: 10
-    priority: 990
+# example values
+# supervisor_programs:
+#   - program: name
+#     command: 'command'
+#     user: "user"
+#     directory: "directory"
+#     numprocs: 1
+#     instalautostart: true
+#     autorestart: true
+#     startsecs: 10
+#     priority: 990
