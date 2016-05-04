@@ -1,12 +1,17 @@
 ---
 
-- name: reloaded supervisor
-  sudo: yes
-  supervisorctl: name="{{ item.name }}" state="{{ item.state }}"
-  register: reloaded_supervisor
-  when: supervisor_app is defined
-  with_items: supervisor_app
-  tags:
-    - webserver
-    - wait
-    - deployment
+- name: add program to supervisor
+  template: src=default.conf.j2 dest=/etc/supervisor/conf.d/{{ item.program,s }}.conf
+  with_items: supervisor_programs
+  when: supervisor_programs|length > 0
+  notify: right-states-programs #We need to restart the program to use the new template
+
+- name: Add all the programs in supervisor if there are not present
+  supervisorctl: name={{ item.program }} state=present
+  with_items: supervisor_programs
+  when: supervisor_programs|length > 0
+
+- name: Put all programs in the right state
+  supervisorctl: name={{ item.program }} state={{ item.state|default('started') }}
+  with_items: supervisor_programs
+  when: supervisor_programs|length > 0
