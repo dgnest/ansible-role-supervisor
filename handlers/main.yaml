@@ -1,5 +1,4 @@
 ---
----
 #Two cases: we want the program to be stopped or to be running
 #1) If we want the program to be stopped, right-states-programs will stop it and
 # restart-programs will keep it stopped
