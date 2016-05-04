@@ -3,7 +3,7 @@ galaxy_info:
   author: Luis Mayta
   description: Ansible role to install supervisor
   company: Dgnest
-  version: 0.0.3
+  version: 0.0.4
   license: Mit
   min_ansible_version: 1.2
   platforms:
