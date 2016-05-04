@@ -1,9 +1,1 @@
 ---
-
-- name: copy template
-  sudo: yes
-  template:
-    src: "{{ item.src }}"
-    dest: "{{ _supervisor_path.conf }}/{{ item.dest }}"
-  with_items: supervisor_templates
-  when: supervisor_templates is defined

@@ -1,5 +1,5 @@
 ---
 
-- name: installing supervisor
+- name: install supervisor using apt
   sudo: yes
-  apt: pkg=supervisor state=latest
+  apt: name=supervisor state=latest update_cache=true cache_valid_time=3600
