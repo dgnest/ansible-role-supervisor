@@ -1,7 +1,7 @@
 ---
 
 - name: add program to supervisor
-  template: src=default.conf.j2 dest=/etc/supervisor/conf.d/{{ item.program,s }}.conf
+  template: src=default.conf.j2 dest=/etc/supervisor/conf.d/{{ item.program }}.conf
   with_items: supervisor_programs
   when: supervisor_programs|length > 0
   notify: right-states-programs #We need to restart the program to use the new template
