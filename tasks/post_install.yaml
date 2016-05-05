@@ -2,16 +2,16 @@
 
 - name: add program to supervisor
   template: src=default.conf.j2 dest=/etc/supervisor/conf.d/{{ item.program }}.conf
-  with_items: supervisor_programs
-  when: supervisor_programs|length > 0
+  with_items: "{{ supervisor_programs|default([]) }}"
+  when: supervisor_programs is defined
   notify: right-states-programs #We need to restart the program to use the new template
 
 - name: Add all the programs in supervisor if there are not present
   supervisorctl: name={{ item.program }} state=present
-  with_items: supervisor_programs
-  when: supervisor_programs|length > 0
+  with_items: "{{ supervisor_programs|default([]) }}"
+  when: supervisor_programs is defined
 
 - name: Put all programs in the right state
   supervisorctl: name={{ item.program }} state={{ item.state|default('started') }}
-  with_items: supervisor_programs
-  when: supervisor_programs|length > 0
+  with_items: "{{ supervisor_programs|default([]) }}"
+  when: supervisor_programs is defined
