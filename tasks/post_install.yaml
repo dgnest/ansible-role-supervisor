@@ -12,6 +12,6 @@
   when: supervisor_programs is defined
 
 - name: Put all programs in the right state
-  supervisorctl: name={{ item.program }} state={{ item.state|default('started') }}
+  supervisorctl: name={{ item.program }} state={{ item.state|default('restarted') }}
   with_items: "{{ supervisor_programs|default([]) }}"
   when: supervisor_programs is defined
