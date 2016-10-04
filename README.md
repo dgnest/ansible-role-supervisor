@@ -56,7 +56,8 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Credits
 
-- [Luis Mayta][link-author]
+Made with :heart: ️:coffee:️ and :pizza: by [dgnest][link-company].
+
 - [All Contributors][link-contributors]
 
 [link-supervisor]: https://supervisord.org/
@@ -64,5 +65,5 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 <!-- Other -->
 
-[link-author]: https://github.com/luismayta
+[link-company]: https://github.com/dgnest
 [link-contributors]: AUTHORS
