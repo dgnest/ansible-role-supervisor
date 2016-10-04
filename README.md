@@ -2,7 +2,6 @@
 
 <span class="badges" align="center">
 [![Build Status](https://travis-ci.org/dgnest/ansible-role-supervisor.svg)](https://travis-ci.org/dgnest/ansible-role-supervisor)
-[![Stories in Ready](https://badge.waffle.io/dgnest/ansible-role-supervisor.svg?label=ready&title=Ready)](http://waffle.io/dgnest/ansible-role-supervisor)
 [![GitHub issues](https://img.shields.io/github/issues/dgnest/ansible-role-supervisor.svg)](https://github.com/dgnest/ansible-role-supervisor/issues)
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](LICENSE)
 </span>
@@ -44,7 +43,7 @@ To install a specific version:
 
     - hosts: servers
       roles:
-         - { role: luismayta.supervisor }
+         - { role: dgnest.supervisor }
 
 
 ## Changelog
@@ -57,7 +56,8 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Credits
 
-- [Luis Mayta][link-author]
+Made with :heart: ️:coffee:️ and :pizza: by [dgnest][link-company].
+
 - [All Contributors][link-contributors]
 
 [link-supervisor]: https://supervisord.org/
@@ -65,5 +65,5 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 <!-- Other -->
 
-[link-author]: https://github.com/luismayta
+[link-company]: https://github.com/dgnest
 [link-contributors]: AUTHORS
