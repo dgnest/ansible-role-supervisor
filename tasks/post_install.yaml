@@ -1,5 +1,10 @@
 ---
 
+- name: add load applications to path
+  template: src=default.sh.j2 dest={{supervisor_path_apps}}/{{ item.program }}.sh
+  with_items: "{{ supervisor_apps|default([]) }}"
+  when: supervisor_apps is defined
+
 - name: add program to supervisor
   template: src=default.conf.j2 dest=/etc/supervisor/conf.d/{{ item.program }}.conf
   with_items: "{{ supervisor_programs|default([]) }}"
