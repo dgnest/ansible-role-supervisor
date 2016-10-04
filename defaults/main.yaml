@@ -2,7 +2,7 @@
 # defaults file for supervisor
 # example values
 
-supervisor_path_apps: /home/"{{user}}"/supervisor
+supervisor_path_apps: "/home/{{user}}/supervisor"
 
 # supervisor_apps:
 #   - program: name
