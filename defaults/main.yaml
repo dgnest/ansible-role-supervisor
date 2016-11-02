@@ -20,3 +20,5 @@ supervisor_path_apps: "/home/{{user}}/supervisor"
 #     autorestart: true
 #     startsecs: 10
 #     priority: 990
+
+disabled_program: ''
