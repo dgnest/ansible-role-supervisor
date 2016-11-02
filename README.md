@@ -1,6 +1,7 @@
 # Ansible Role Supervisor
 
 <span class="badges" align="center">
+[![GitHub tag](https://img.shields.io/github/tag/dgnest/ansible-role-supervisor.svg?maxAge=2592000)](https://github.com/dgnest/ansible-role-supervisor)
 [![Build Status](https://travis-ci.org/dgnest/ansible-role-supervisor.svg)](https://travis-ci.org/dgnest/ansible-role-supervisor)
 [![GitHub issues](https://img.shields.io/github/issues/dgnest/ansible-role-supervisor.svg)](https://github.com/dgnest/ansible-role-supervisor/issues)
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](LICENSE)
@@ -44,7 +45,6 @@ To install a specific version:
     - hosts: servers
       roles:
          - { role: dgnest.supervisor }
-
 
 ## Changelog
 
