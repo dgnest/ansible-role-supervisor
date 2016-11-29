@@ -3,7 +3,8 @@ All notable changes to this project will be documented in this file.
 This file uses change log convention from [Keep a CHANGELOG](http://keepachangelog.com).
 
 
-[unreleased]: https://github.com/dgnest/ansible-role-supervisor/compare/0.0.7...HEAD
+[unreleased]: https://github.com/dgnest/ansible-role-supervisor/compare/0.0.8...HEAD
+[0.0.8]: https://github.com/dgnest/ansible-role-supervisor/compare/0.0.7...0.0.8
 [0.0.7]: https://github.com/dgnest/ansible-role-supervisor/compare/0.0.6...0.0.7
 [0.0.6]: https://github.com/dgnest/ansible-role-supervisor/compare/0.0.5...0.0.6
 [0.0.5]: https://github.com/dgnest/ansible-role-supervisor/compare/0.0.4...0.0.5
