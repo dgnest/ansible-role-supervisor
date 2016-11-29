@@ -1,6 +1,7 @@
 # Ansible Role Supervisor
 
 <span class="badges" align="center">
+[![GitHub tag](https://img.shields.io/github/tag/dgnest/ansible-role-supervisor.svg?maxAge=2592000)](https://github.com/dgnest/ansible-role-supervisor)
 [![Build Status](https://travis-ci.org/dgnest/ansible-role-supervisor.svg)](https://travis-ci.org/dgnest/ansible-role-supervisor)
 [![GitHub issues](https://img.shields.io/github/issues/dgnest/ansible-role-supervisor.svg)](https://github.com/dgnest/ansible-role-supervisor/issues)
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](LICENSE)
@@ -23,6 +24,23 @@ The default role variables in `defaults/main.yml` are:
 
     ---
     # defaults file for supervisor
+    supervisor_apps:
+      - program: name
+        application_path: /home/user/project/src
+        application_environment: {{ deployment_file_load_virtualenvwrapper }}
+        execution: celery -A {{ app_name }} worker --loglevel=info
+
+    supervisor_programs:
+      - program: name
+        command: 'command'
+        user: "user"
+        directory: "directory"
+        numprocs: 1
+        instalautostart: true
+        autorestart: true
+        startsecs: 10
+        priority: 990
+        disabled_program: name program to disabled
 
 
 ## Dependencies
@@ -44,7 +62,6 @@ To install a specific version:
     - hosts: servers
       roles:
          - { role: dgnest.supervisor }
-
 
 ## Changelog
 

@@ -5,14 +5,13 @@
 
 # Python code to execute, usually for sys.path manipulation such as
 # pygtk.require().
-# init-hook="sys.path.insert(0,os.path.abspath('src'))"
+#init-hook=
 
 # Profiled execution.
 # profile=no
 
 # Add files or directories to the blacklist. They should be base names, not
 # paths.
-
 ignore=migrations,settings.py,settings_openshift.py,settings_test.py,settings_test_mysql.py,settings_test_postgresql.py,settings_test_sqlite.py,.git,test-repos,repos,settings_test_nose.py
 
 # Pickle collected data for later comparisons.
@@ -136,7 +135,7 @@ init-import=no
 
 # A regular expression matching the name of dummy variables (i.e. expectedly
 # not used).
-dummy-variables-rgx=dummy
+# dummy-variables-rgx=dummy,_
 
 # List of additional names supposed to be defined in builtins. Remember that
 # you should avoid to define new builtins when possible.
