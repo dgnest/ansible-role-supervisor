@@ -22,14 +22,6 @@ TEST = $(shell) $(SCRIPT_DIR)/test.sh
 SYNC = $(shell) $(SCRIPT_DIR)/sync.sh
 WATCH = $(shell) $(SCRIPT_DIR)/watch.sh
 
-install:
-	$(INSTALL)
-
-
-roles:
-	$(ROLES_ANSIBLE)
-
-
 ansible_provision:
 	$(ANSIBLE_PROVISION)
 
@@ -61,6 +53,14 @@ environment:
 
 grip:
 	$(GRIP)
+
+
+install:
+	$(INSTALL)
+
+
+roles:
+	$(ROLES_ANSIBLE)
 
 
 maintainer-clean: distclean
