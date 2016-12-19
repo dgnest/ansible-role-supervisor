@@ -6,12 +6,12 @@
 # and then to restart it.
 
 - name: restart supervisor
-  sudo: yes
-  service: name=supervisor state=restarted enabled=yes
+  become: true
+  service: name=supervisor state=restarted enabled=true
 
 - name: reload supervisor
-  sudo: yes
-  service: name=supervisor state=reloaded enabled=yes
+  become: true
+  service: name=supervisor state=reloaded enabled=true
 
 - name: right-states-programs
   supervisorctl: name={{ item.program }} state=stopped
