@@ -6,21 +6,21 @@
 # and then to restart it.
 
 - name: restart supervisor
-  sudo: yes
-  service: name=supervisor state=restarted enabled=yes
+  become: true
+  service: name=supervisor state=restarted enabled=true
 
 - name: reload supervisor
-  sudo: yes
-  service: name=supervisor state=reloaded enabled=yes
+  become: true
+  service: name=supervisor state=reloaded enabled=true
 
 - name: right-states-programs
   supervisorctl: name={{ item.program }} state=stopped
-  with_items: supervisor_programs
+  with_items: "{{ supervisor_programs | default({}) }}"
   when: supervisor_programs|length > 0
   notify: restart-programs
   changed_when: true #We need to call restart-programs every time
 
 - name: restart-programs
   supervisorctl: name={{ item.program }} state={{ item.state|default('restarted') }}
-  with_items: supervisor_programs
+  with_items: "{{ supervisor_programs | default({}) }}"
   when: supervisor_programs|length > 0
