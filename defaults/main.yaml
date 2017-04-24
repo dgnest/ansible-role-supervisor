@@ -9,6 +9,9 @@ supervisor_path_apps: "/home/{{user}}/supervisor"
 #     application_path: /home/user/project/src
 #     application_environment: {{ deployment_file_load_virtualenvwrapper }}
 #     execution: celery -A {{ app_name }} worker --loglevel=info
+#     extra_parameters: |
+#       other_vars: vars
+
 
 # supervisor_programs:
 #   - program: name
@@ -20,5 +23,7 @@ supervisor_path_apps: "/home/{{user}}/supervisor"
 #     autorestart: true
 #     startsecs: 10
 #     priority: 990
+#     extra_parameters: |
+#       other_vars: vars
 
 disabled_program: ''

@@ -2,8 +2,12 @@
 
 echo "Starting {{ item.program }}"
 
+{% if item.extra_parameters is defined %}
+    {{ item.extra_parameters | indent(4) }}
+{% endif %}
+
 {% if item.application_environment is defined %}
-source {{ item.application_environment }}
+source {{ item.application_environment}}
 {% endif %}
 
 {% if item.application_path is defined %}
