@@ -1,4 +1,4 @@
-version = '0.0.9'
+version = '0.1.0'
 
 [[files."CHANGELOG.md"]]
 search = """
@@ -12,7 +12,7 @@ replace = """
 
 [[files."CHANGELOG.md"]]
 search = """
-[Unreleased]: https://github.com/dgnest/ansible-role-asterisk/compare/{{old_version}}...HEAD
+[Unreleased]: https://github.com/dgnest/ansible-role-supervisor/compare/{{old_version}}...HEAD
 """
 replace = """
 [Unreleased]: https://github.com/dgnest/ansible-role-supervisor/compare/{{new_version}}...HEAD
