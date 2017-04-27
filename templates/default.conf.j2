@@ -17,6 +17,9 @@ autorestart={{ item.autorestart|default('true') }}
 startretries={{ item.startretries|default('3') }}
 startsecs={{ item.startsecs|default('10') }}
 priority={{ item.priority|default('998') }}
+{% if item.extra_parameters is defined %}
+    {{ item.extra_parameters }}
+{% endif %}
 ; When resorting to send SIGKILL to the program to terminate it
 ; send SIGKILL to its whole process group instead,
 ; taking care of its children as well.
